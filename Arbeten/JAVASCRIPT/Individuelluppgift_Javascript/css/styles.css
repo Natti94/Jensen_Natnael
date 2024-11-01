@@ -10,3 +10,18 @@ border-radius: 3px;
 {
 border-radius: 3px;
 }
+
+
+.field-1, .field-2
+
+{
+    display: none;
+    float: inline-start;
+    flex-grow: 1;
+    height: 20px;
+    width: 200px;
+    border-radius: 3px;
+    background-color: whitesmoke;
+    
+}
+
