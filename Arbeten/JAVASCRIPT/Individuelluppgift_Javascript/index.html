@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kunskapskontroll - Kontaktlista applikation</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/variables.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kunskapskontroll - Kontaktlista applikation</title>
+<link rel="stylesheet" href="css/styles.css">
+    
 </head>
+
 <body>
+
 <script src="main.js"></script>
 
-<input class="namn" placeholder="Namn">
-<input class="telefon" placeholder="Telefon">
-<button onclick="registerUser()">Skapa</button>
-<br>
+<button onclick="registerUser()" id="skapa" class="skapa">Skapa</button>
+
+<input id="nameFieldType" class="nameFieldType" placeholder="Name">
+<input id="phoneFieldType" class="phoneFieldType" placeholder="Phone">
+
 <h2>Kontaktlista</h2>
-<br>
-<input class="field-1" id="theField-namn"></input>
-<input class="field-2" id="theField-telefon"></input>
+
+<div id="registeredName" class="registeredName"></div> 
+<div id="registeredPhone" class="registeredPhone"></div>
 
 </body>
-</html> 
+
+</html>
+

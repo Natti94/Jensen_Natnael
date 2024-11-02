@@ -1,27 +1,40 @@
+function registerUser() 
 
-function registerUser() {
-    let theFieldNamn = document.getElementById('theField-namn');
-    let theFieldTelefon = document.getElementById('theField-telefon');
-    let displayBox = document.getElementById('displayBox'); // Select the display box
-    
-    theFieldNamn.style.display = "flex"; 
-    theFieldTelefon.style.display = "flex"; 
-  
-    // Combine input values
-    const text = theFieldNamn.value.trim() + " " + theFieldTelefon.value.trim();
-    
-    // Show the text in an alert popup if not empty
-    if (text.trim() !== "") {  
-      alert(text);
-    }
-  
-    // Display the text in the display box
-    displayBox.textContent = text;
-  
-    // Clear the input fields if desired
-    theFieldNamn.value = '';
-    theFieldTelefon.value = '';
-  }
-  
+{
+
+let nameFieldType = document.getElementById('nameFieldType');
+let telephoneFieldType = document.getElementById('phoneFieldType');
+
+let toDisplayName = document.getElementById('registeredName')
+let toDisplayTelephone = document.getElementById('registeredPhone')
+
+let nameText = nameFieldType.value.trim();
+let telephoneText = telephoneFieldType.value.trim();
+
+if (nameText !== "") 
+
+{
+
+let nameListItem = document.createElement('li');
+document.getElementById('registeredName').style.display = "block";
+nameListItem.textContent = nameText;
+toDisplayName.appendChild(nameListItem);
+
+}
+
+if (telephoneText !== "") 
+
+{
+let phoneListItem = document.createElement('li');
+document.getElementById('registeredPhone').style.display = "block";
+phoneListItem.textContent = telephoneText;
+toDisplayTelephone.appendChild(phoneListItem);
+
+}
+
+nameFieldType.value = "";
+telephoneFieldType.value = "";
+
+}
 
 

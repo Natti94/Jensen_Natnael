@@ -1,27 +1,19 @@
-
-.namn, .telefon 
-{
-height: 20px;
-width: 200px;
-border-radius: 3px;
-}
-
-.skapa
+.nameFieldType, .phoneFieldType
 {
 border-radius: 3px;
 }
 
-
-.field-1, .field-2
-
+.skapa 
 {
-    display: none;
-    float: inline-start;
-    flex-grow: 1;
-    height: 20px;
-    width: 200px;
-    border-radius: 3px;
-    background-color: whitesmoke;
-    
+border-radius: 3px;
 }
 
+.registeredName, .registeredPhone
+{
+display: none;
+float: inline-start;
+padding: 2px;
+width: 150px;
+border: 1px solid black;
+border-radius: 3px;
+}
