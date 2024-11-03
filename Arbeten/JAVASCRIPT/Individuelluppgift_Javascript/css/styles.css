@@ -1,0 +1,17 @@
+.nameFieldType, .phoneFieldType
+{
+border-radius: 3px;
+}
+
+.skapa 
+{
+border-radius: 3px;
+}
+
+.registeredName, .registeredPhone
+{
+display: none;
+float: inline-start;
+border-radius: 3px;
+}
+
