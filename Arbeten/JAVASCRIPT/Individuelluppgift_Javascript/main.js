@@ -9,6 +9,7 @@ let toDisplayUserPhone = document.getElementById('registeredPhone');
 let editUser = document.getElementById('ändra');
 let removeUser = document.getElementById('radera');
 
+// lagrande för användare //
 if (nameFieldType.value !== "" && phoneFieldType.value !== "")
 {
 toDisplayUserName.value = nameFieldType.value;
@@ -20,36 +21,63 @@ toDisplayUserPhone.style.background = "lightgray"
 editUser.style.display = "inherit";
 removeUser.style.display = "inherit";
 }
+
+// reset på nameFieldType & phoneFieldType //
 {
 nameFieldType.value = "";
 phoneFieldType.value = "";    
 }
+
 }
 
 
-// redigerings knapp //
-function editUser()
+// redigerings knapp som false //
+let isEditing = false;
+
+function editUser() 
 {
+
 let editButton = document.getElementById('ändra');
+let nameField = document.getElementById('registeredName');
+let phoneField = document.getElementById('registeredPhone');
+    
+// redigerings status //
+isEditing = !isEditing;
 
-if (editButton)
+if (isEditing)
 {
-document.getElementById('registeredName').readOnly = false;
-document.getElementById('registeredPhone').readOnly = false;
-document.getElementById('registeredName').style.background = "white";
-document.getElementById('registeredPhone').style.background = "white";
+// spara knapp //
+nameField.readOnly = false;
+phoneField.readOnly = false;
+nameField.style.background = "white";
+phoneField.style.background = "white";
+editButton.innerText = "Spara";
+} 
+
+else 
+{
+// redigering av knapp //
+nameField.readOnly = true;
+phoneField.readOnly = true;
+nameField.style.background = "lightgray";
+phoneField.style.background = "lightgray";
+editButton.innerText = "Ändra";
+}
+
 }
 
 
-}
+
 
 
 // raderings knapp //
 function removeUser() 
 {
-let toDisplayUserName = document.getElementById('registeredName')
-let toDisplayUserPhone = document.getElementById('registeredPhone')
-let removeButton = document.getElementById('ändra')
+    
+let removeButton = document.getElementById('radera')
+let removeUserName = document.getElementById('registeredName')
+let removeUserPhone = document.getElementById('registeredPhone')
+
 
 }
 
