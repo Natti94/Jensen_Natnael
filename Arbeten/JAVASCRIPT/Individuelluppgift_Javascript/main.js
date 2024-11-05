@@ -19,8 +19,6 @@ toDisplayUserName.style.background = "ghostwhite";
 toDisplayUserPhone.style.background = "ghostwhite";
 editUser.style.display = "inherit";
 removeUser.style.display = "inherit";
-let storing = document.getElementById('registeredName' && 'registeredPhone');
-storing.textContent = nameFieldType.value && phoneFieldType.value;
 // reset på nameFieldType & phoneFieldType //
 nameFieldType.value = "";
 phoneFieldType.value = ""; 
@@ -32,8 +30,6 @@ errorMessage.style.display = "inherit";
 errorMessage.style.color = "red";
 }
 }
-
-
 
 // redigerings knapp som false //
 let isEditing = false;
