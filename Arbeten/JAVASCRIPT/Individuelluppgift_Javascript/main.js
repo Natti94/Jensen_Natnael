@@ -3,10 +3,11 @@ function registerUser()
 {
 let nameFieldType = document.getElementById('nameFieldType');
 let phoneFieldType = document.getElementById('phoneFieldType');
-let toDisplayUserName = document.getElementById('registeredName');
-let toDisplayUserPhone = document.getElementById('registeredPhone');
+let toDisplayUserName = document.getElementById('registeredName')
+let toDisplayUserPhone = document.getElementById('registeredPhone')
 let editUser = document.getElementById('ändra');
 let removeUser = document.getElementById('radera');
+let errorMessage = document.getElementById('errorMessage');
 // lagrande för användare //
 if (nameFieldType.value !== "" && phoneFieldType.value !== "")
 {
@@ -14,17 +15,24 @@ toDisplayUserName.value = nameFieldType.value;
 toDisplayUserPhone.value = phoneFieldType.value;
 toDisplayUserName.style.display = "inherit";
 toDisplayUserPhone.style.display = "inherit";
-toDisplayUserName.style.background = "lightgray";
-toDisplayUserPhone.style.background = "lightgray";
+toDisplayUserName.style.background = "ghostwhite";
+toDisplayUserPhone.style.background = "ghostwhite";
 editUser.style.display = "inherit";
 removeUser.style.display = "inherit";
-}
+let storing = document.getElementById('registeredName' && 'registeredPhone');
+storing.textContent = nameFieldType.value && phoneFieldType.value;
 // reset på nameFieldType & phoneFieldType //
-{
 nameFieldType.value = "";
-phoneFieldType.value = "";    
+phoneFieldType.value = ""; 
+errorMessage.style.display = "none";
+}
+else
+{
+errorMessage.style.display = "inherit";
+errorMessage.style.color = "red";
 }
 }
+
 
 
 // redigerings knapp som false //
@@ -41,8 +49,8 @@ if (isEditing)
 // spara knapp //
 nameField.readOnly = false;
 phoneField.readOnly = false;
-nameField.style.background = "white";
-phoneField.style.background = "white";
+nameField.style.background = "inherit";
+phoneField.style.background = "inherit";
 editButton.innerText = "Spara";
 } 
 else 
@@ -50,8 +58,8 @@ else
 // redigering av knapp //
 nameField.readOnly = true;
 phoneField.readOnly = true;
-nameField.style.background = "lightgray";
-phoneField.style.background = "lightgray";
+nameField.style.background = "ghostwhite";
+phoneField.style.background = "ghostwhite";
 editButton.innerText = "Ändra";
 }
 }

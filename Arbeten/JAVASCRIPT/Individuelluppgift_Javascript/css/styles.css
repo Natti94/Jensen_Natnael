@@ -22,3 +22,7 @@ float: inline-start;
 border-radius: 3px;
 }
 
+.errorMessage 
+{
+display: none;
+}

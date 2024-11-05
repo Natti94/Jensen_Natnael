@@ -12,8 +12,8 @@
 
 <script src="main.js"></script>
 
-<input id="nameFieldType" class="nameFieldType" placeholder="Name">
-<input id="phoneFieldType" class="phoneFieldType" placeholder="Phone">
+<input id="nameFieldType" class="nameFieldType" placeholder="Namn">
+<input id="phoneFieldType" class="phoneFieldType" placeholder="Telefon">
 
 <button onclick="registerUser()" id="skapa" class="skapa">Skapa</button>
 
@@ -21,9 +21,14 @@
 
 <input id="registeredName" class="registeredName" readonly="readonly"></input>
 <input id="registeredPhone" class="registeredPhone" readonly="readonly"></input>
+
 <button onclick="editUser()" id="ändra" class="ändra">Ändra</button>
 <button onclick="removeUser()" id="radera" class="radera">Radera</button>
-<div id="usersList"></div>
+
+<br>
+
+<h2 id="errorMessage" class="errorMessage">Får ej skapa tom kontakt</h2>
+
 </body>
 
 </html>
