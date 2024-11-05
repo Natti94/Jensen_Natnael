@@ -60,9 +60,16 @@ editButton.innerText = "Ändra";
 // raderings knapp //
 function removeUser() 
 {    
-let removeButton = document.getElementById('radera')
-let removeUserName = document.getElementById('registeredName')
-let removeUserPhone = document.getElementById('registeredPhone')
-// INTE KLART //
+let removeEditButton = document.getElementById('ändra');
+let removeUser = document.getElementById('radera');
+let removeUserName = document.getElementById('registeredName');
+let removeUserPhone = document.getElementById('registeredPhone');
+if (removeUser)
+{
+removeEditButton.style.display = "none";
+removeUser.style.display = "none";
+removeUserName.style.display = "none";
+removeUserPhone.style.display = "none";
+}
 }
 
