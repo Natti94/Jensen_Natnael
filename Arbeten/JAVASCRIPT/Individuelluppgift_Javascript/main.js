@@ -3,16 +3,16 @@ function registerUser()
 {
 let nameFieldType = document.getElementById('nameFieldType');
 let phoneFieldType = document.getElementById('phoneFieldType');
-let toDisplayUserName = document.getElementById('registeredName')
-let toDisplayUserPhone = document.getElementById('registeredPhone')
+var toDisplayUserName = document.getElementById('registeredName');
+var toDisplayUserPhone = document.getElementById('registeredPhone');
 let editUser = document.getElementById('ändra');
 let removeUser = document.getElementById('radera');
 let errorMessage = document.getElementById('errorMessage');
 // lagrande för användare //
 if (nameFieldType.value !== "" && phoneFieldType.value !== "")
 {
-toDisplayUserName.value = nameFieldType.value;
-toDisplayUserPhone.value = phoneFieldType.value;
+nameFieldType.value = toDisplayUserName.value
+phoneFieldType.value = toDisplayUserPhone.value
 toDisplayUserName.style.display = "inherit";
 toDisplayUserPhone.style.display = "inherit";
 toDisplayUserName.style.background = "ghostwhite";
@@ -23,6 +23,14 @@ removeUser.style.display = "inherit";
 nameFieldType.value = "";
 phoneFieldType.value = ""; 
 errorMessage.style.display = "none";
+toDisplayUserName.value = document.getElementById("div");
+const wrapper = document.createElement("div");
+const iFeild = document.createElement("input");
+iFeild.setAttribute("type", "text");
+iFeild.setAttribute("placeholder", "Enter value");
+iFeild.classList.add("input-field");
+wrapper.appendChild(iFeild);
+toDisplayUserName.value.appendChild(wrapper);
 }
 else
 {
@@ -30,6 +38,7 @@ errorMessage.style.display = "inherit";
 errorMessage.style.color = "red";
 }
 }
+
 
 // redigerings knapp som false //
 let isEditing = false;
@@ -48,6 +57,7 @@ phoneField.readOnly = false;
 nameField.style.background = "inherit";
 phoneField.style.background = "inherit";
 editButton.innerText = "Spara";
+
 } 
 else 
 {

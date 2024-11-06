@@ -15,7 +15,14 @@ border-radius: 3px;
 float: inline-start;
 }
 
-.registeredName, .registeredPhone
+.registeredName, .registeredPhone, .registeredNameDisplay, .registeredPhoneDisplay
+{
+display: none;
+float: inline-start;
+border-radius: 3px;
+}
+
+.registeredNameDisplay, .registeredPhoneDisplay
 {
 display: none;
 float: inline-start;
