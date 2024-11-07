@@ -1,0 +1,68 @@
+.container 
+{
+display: grid;
+grid-gap: 10px;
+}
+
+header
+{
+color: white;
+}
+
+.background-video
+{
+z-index: -1;
+position: fixed;
+}
+
+nav
+{
+grid-column: 1 / 13;
+font-size: 30px;
+font-family: fantasy;
+}
+
+nav > a
+{
+color: white;
+margin: 5px;
+text-decoration: none;
+}
+
+.news
+{
+grid-column: 1 / 7;
+border: 1px solid white;
+height: 300px;
+max-height: 100%;
+}
+
+.events
+{
+grid-column: 7 / 13;
+border: 1px solid white;
+height: 300px;
+max-height: 100%;
+}
+
+.contests
+{
+grid-column: 1 / 10;
+border: 1px solid white;
+height: 300px;
+max-height: 100%;
+}
+
+.socials
+{
+grid-column: 10 / 13;
+border: 1px solid white;
+height: 300px;
+max-height: 100%;
+}
+
+.copyright
+{
+text-align: left;
+color: white;
+}
