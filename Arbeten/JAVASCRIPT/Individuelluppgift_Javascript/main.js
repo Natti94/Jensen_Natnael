@@ -1,89 +1,60 @@
-// input fält (namn/alias + telefon nr) & skapa knapp //
-function registerUser() 
-{
-let nameFieldType = document.getElementById('nameFieldType');
-let phoneFieldType = document.getElementById('phoneFieldType');
-var toDisplayUserName = document.getElementById('registeredName');
-var toDisplayUserPhone = document.getElementById('registeredPhone');
-let editUser = document.getElementById('ändra');
-let removeUser = document.getElementById('radera');
-let errorMessage = document.getElementById('errorMessage');
-// lagrande för användare //
-if (nameFieldType.value !== "" && phoneFieldType.value !== "")
-{
-nameFieldType.value = toDisplayUserName.value
-phoneFieldType.value = toDisplayUserPhone.value
-toDisplayUserName.style.display = "inherit";
-toDisplayUserPhone.style.display = "inherit";
-toDisplayUserName.style.background = "ghostwhite";
-toDisplayUserPhone.style.background = "ghostwhite";
-editUser.style.display = "inherit";
-removeUser.style.display = "inherit";
-// reset på nameFieldType & phoneFieldType //
-nameFieldType.value = "";
-phoneFieldType.value = ""; 
-errorMessage.style.display = "none";
-toDisplayUserName.value = document.getElementById("div");
-const wrapper = document.createElement("div");
-const iFeild = document.createElement("input");
-iFeild.setAttribute("type", "text");
-iFeild.setAttribute("placeholder", "Enter value");
-iFeild.classList.add("input-field");
-wrapper.appendChild(iFeild);
-toDisplayUserName.value.appendChild(wrapper);
-}
-else
-{
-errorMessage.style.display = "inherit";
-errorMessage.style.color = "red";
-}
-}
-
-
-// redigerings knapp som false //
-let isEditing = false;
-function editUser() 
-{
-let editButton = document.getElementById('ändra');
-let nameField = document.getElementById('registeredName');
-let phoneField = document.getElementById('registeredPhone');   
-// redigerings status //
-isEditing = !isEditing;
-if (isEditing)
-{
-// spara knapp //
-nameField.readOnly = false;
-phoneField.readOnly = false;
-nameField.style.background = "inherit";
-phoneField.style.background = "inherit";
-editButton.innerText = "Spara";
-
-} 
-else 
-{
-// redigering av knapp //
-nameField.readOnly = true;
-phoneField.readOnly = true;
-nameField.style.background = "ghostwhite";
-phoneField.style.background = "ghostwhite";
-editButton.innerText = "Ändra";
-}
+function registerUser() {
+  let nameFieldType = document.getElementById("nameFieldType");
+  let phoneFieldType = document.getElementById("phoneFieldType");
+  let errorMessage = document.getElementById("errorMessage");
+  let userList = document.getElementById("userList");
+  errorMessage.style.display = "none";
+  
+  if (nameFieldType.value !== "" && phoneFieldType.value !== "") {
+    let userContainer = document.createElement("div");
+    userContainer.style.marginBottom = "10px";
+    let displayName = document.createElement("input");
+    displayName.value = nameFieldType.value;
+    displayName.readOnly = true;
+    displayName.style.background = "lightgray";
+    displayName.style.marginRight = "10px";
+    let displayPhone = document.createElement("input");
+    displayPhone.value = phoneFieldType.value;
+    displayPhone.readOnly = true;
+    displayPhone.style.background = "lightgray";
+    displayPhone.style.marginRight = "10px";
+    let editButton = document.createElement("button");
+    editButton.innerText = "Ändra";
+    editButton.onclick = function () {
+      editUser(displayName, displayPhone, editButton);
+    };
+    let removeButton = document.createElement("button");
+    removeButton.innerText = "Radera";
+    removeButton.onclick = function () {
+      removeUser(userContainer);
+    };
+    userContainer.appendChild(displayName);
+    userContainer.appendChild(displayPhone);
+    userContainer.appendChild(editButton);
+    userContainer.appendChild(removeButton);
+    userList.appendChild(userContainer);
+    nameFieldType.value = "";
+    phoneFieldType.value = "";
+  } else {
+    errorMessage.style.display = "block";
+  }
 }
 
-
-// raderings knapp //
-function removeUser() 
-{    
-let removeEditButton = document.getElementById('ändra');
-let removeUser = document.getElementById('radera');
-let removeUserName = document.getElementById('registeredName');
-let removeUserPhone = document.getElementById('registeredPhone');
-if (removeUser)
-{
-removeEditButton.style.display = "none";
-removeUser.style.display = "none";
-removeUserName.style.display = "none";
-removeUserPhone.style.display = "none";
+function editUser(nameField, phoneField, editButton) {
+  if (editButton.innerText === "Ändra") {
+    nameField.readOnly = false;
+    phoneField.readOnly = false;
+    nameField.style.background = "inherit";
+    phoneField.style.background = "inherit";
+    editButton.innerText = "Spara";
+  } else {
+    nameField.readOnly = true;
+    phoneField.readOnly = true;
+    nameField.style.background = "lightgray";
+    phoneField.style.background = "lightgray";
+    editButton.innerText = "Ändra";
+  }
 }
+function removeUser(userContainer) {
+  userContainer.remove();
 }
-

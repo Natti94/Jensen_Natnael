@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kunskapskontroll - Kontaktlista applikation</title>
-<link rel="stylesheet" href="css/styles.css">
-    
-</head>
-
-<body>
-
-<script src="main.js"></script>
-
-<input id="nameFieldType" class="nameFieldType" placeholder="Namn">
-<input id="phoneFieldType" class="phoneFieldType" placeholder="Telefon">
-
-<button onclick="registerUser()" id="skapa" class="skapa">Skapa</button>
-
-<h2>Kontaktlista</h2>
-
-<input id="registeredName" class="registeredName" readonly="readonly"></input>
-<input id="registeredPhone" class="registeredPhone" readonly="readonly"></input>
-
-<button onclick="editUser()" id="ändra" class="ändra">Ändra</button>
-<button onclick="removeUser()" id="radera" class="radera">Radera</button>
-<br>
-
-<h2 id="errorMessage" class="errorMessage">Får ej skapa tom kontakt</h2>
-<div id="heh"></div>
-<div id="inputFields"></div>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kunskapskontroll - Kontaktlista applikation</title>
+  </head>
+  <body>
+    <script src="main.js"></script>
+    <input type="text" id="nameFieldType" placeholder="Namn" />
+    <input type="text" id="phoneFieldType" placeholder="Telefon" />
+    <button onclick="registerUser()">Skapa Kontakt</button>
+    <h2>Kontaktlista</h2>
+    <div id="userList"></div>
+    <h2 id="errorMessage" style="display: none; color: red">
+      Fyll i båda fälten för Namn & Telefon!
+    </h2>
+  </body>
 </html>
-

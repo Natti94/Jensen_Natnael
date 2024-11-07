@@ -1,32 +1,19 @@
-.nameFieldType, .phoneFieldType
-{
-border-radius: 3px;
-}
-
-.skapa, .ändra, .radera
-{
-border-radius: 3px;
-}
-
 .ändra, .radera
 {
 display: none;
-border-radius: 3px;
 float: inline-start;
 }
 
-.registeredName, .registeredPhone, .registeredNameDisplay, .registeredPhoneDisplay
+.registeredName, .registeredPhone
 {
 display: none;
 float: inline-start;
-border-radius: 3px;
 }
 
 .registeredNameDisplay, .registeredPhoneDisplay
 {
 display: none;
 float: inline-start;
-border-radius: 3px;
 }
 
 .errorMessage 
