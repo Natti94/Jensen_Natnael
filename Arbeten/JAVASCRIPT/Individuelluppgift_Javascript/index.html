@@ -9,10 +9,17 @@
     <input type="text" id="nameFieldType" placeholder="Namn" />
     <input type="text" id="phoneFieldType" placeholder="Telefon" />
     <button onclick="registerUser()">Skapa Kontakt</button>
+    <button onclick="removeAllUser()">Radera Alla Kontakter</button>
     <h2>Kontaktlista</h2>
     <div id="userList"></div>
-    <h2 id="errorMessage" style="display: none; color: red">
+    <h2 id="errorMessageNamePhone" style="display: none; color: red">
       Fyll i båda fälten för Namn & Telefon!
+    </h2>
+    <h2 id="errorMessageName" style="display: none; color: red">
+      Fyll fältet för Namn!
+    </h2>
+    <h2 id="errorMessagePhone" style="display: none; color: red">
+      Fyll i fältet för Telefon!
     </h2>
   </body>
 </html>
