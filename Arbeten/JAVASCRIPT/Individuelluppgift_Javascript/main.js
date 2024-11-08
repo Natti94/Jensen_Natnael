@@ -55,6 +55,7 @@ function editUser(nameField, phoneField, editButton) {
     editButton.innerText = "Ändra";
   }
 }
+
 function removeUser(userContainer) {
   userContainer.remove();
 }
