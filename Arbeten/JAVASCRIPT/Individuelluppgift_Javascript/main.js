@@ -1,11 +1,17 @@
 function registerUser() {
   let nameFieldType = document.getElementById("nameFieldType");
   let phoneFieldType = document.getElementById("phoneFieldType");
-  let errorMessage = document.getElementById("errorMessage");
+  let errorMessageNamePhone = document.getElementById("errorMessageNamePhone");
+  let errorMessageName = document.getElementById("errorMessageName")
+  let errorMessagePhone = document.getElementById("errorMessagePhone")
   let userList = document.getElementById("userList");
-  errorMessage.style.display = "none";
+  errorMessageNamePhone.style.display = "none";
+  errorMessageName.style.display = "none";
+  errorMessagePhone.style.display = "none";
   
+
   if (nameFieldType.value !== "" && phoneFieldType.value !== "") {
+    
     let userContainer = document.createElement("div");
     userContainer.style.marginBottom = "10px";
     let displayName = document.createElement("input");
@@ -28,6 +34,7 @@ function registerUser() {
     removeButton.onclick = function () {
       removeUser(userContainer);
     };
+
     userContainer.appendChild(displayName);
     userContainer.appendChild(displayPhone);
     userContainer.appendChild(editButton);
@@ -35,10 +42,28 @@ function registerUser() {
     userList.appendChild(userContainer);
     nameFieldType.value = "";
     phoneFieldType.value = "";
-  } else {
-    errorMessage.style.display = "block";
+    return;
+  } if (nameFieldType.value === "" && phoneFieldType.value === "") {
+    errorMessageNamePhone.style.display = "inherit";
+    return;
+  }
+
+  if (nameFieldType.value === "") {
+    errorMessageName.style.display = "inherit";
+    return;
+  }
+
+  if (phoneFieldType.value === "") {
+    errorMessagePhone.style.display = "inherit";
+    return;
   }
 }
+
+function removeAllUser() {
+  userList.remove()
+  
+}
+
 
 function editUser(nameField, phoneField, editButton) {
   if (editButton.innerText === "Ändra") {
@@ -55,6 +80,7 @@ function editUser(nameField, phoneField, editButton) {
     editButton.innerText = "Ändra";
   }
 }
+
 function removeUser(userContainer) {
   userContainer.remove();
 }
