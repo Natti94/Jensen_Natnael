@@ -1,6 +1,0 @@
-https://github.com/Natti94
-
-Repo:
-https://github.com/Natti94/individuelluppgift_Javascript - Kunskapskontroll - Kontaktlista applikation
-https://github.com/Natti94/Individuelluppgift_Frontend_Klient - inlämningsuppgift 1
-https://github.com/Natti94/Gruppuppgift_Frontend_Klient - Gruppuppgift
