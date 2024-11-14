@@ -1,0 +1,14 @@
+JAVASCRIPT 
+---------
+INTRO-BACKEND
+
+
+1. 
+länka till express/node mudles > 
+const express = require('express')
+
+2.
+Lokalisera till port >
+const port = 3000
+
+3.
