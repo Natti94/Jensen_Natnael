@@ -1,70 +1,66 @@
-.background-video
-{
-z-index: -1;
-position: fixed;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.container 
-{
-display: grid;
-grid-gap: 30px;
+.background-video {
+  z-index: -1;
+  position: fixed;
 }
 
-header
-{
-grid-column: 5 / 13;
-color: white;
+.container {
+  display: grid;
+  grid-gap: 30px;
 }
 
-nav
-{
-grid-column: 1 / 13;
-font-size: 30px;
-font-family: fantasy;
+header {
+  grid-column: 5 / 13;
+  color: white;
 }
 
-nav > a
-{
-
-color: white;
-margin: 5px;
-text-decoration: none;
+nav {
+  grid-column: 1 / 13;
+  font-size: 30px;
+  font-family: fantasy;
+  background-color: black;
 }
 
-.news
-{
-grid-column: 1 / 7;
-border: 1px solid white;
-height: 300px;
-max-height: 100%;
+nav > a {
+  color: white;
+  margin: 5px;
+  text-decoration: none;
 }
 
-.events
-{
-grid-column: 7 / 13;
-border: 1px solid white;
-height: 300px;
-max-height: 100%;
+.news {
+  grid-column: 1 / 7;
+  border: 1px solid white;
+  height: 300px;
+  max-height: 100%;
 }
 
-.contests
-{
-grid-column: 1 / 10;
-border: 1px solid white;
-height: 300px;
-max-height: 100%;
+.events {
+  grid-column: 7 / 13;
+  border: 1px solid white;
+  height: 300px;
+  max-height: 100%;
 }
 
-.socials
-{
-grid-column: 10 / 13;
-border: 1px solid white;
-height: 300px;
-max-height: 100%;
+.contests {
+  grid-column: 1 / 10;
+  border: 1px solid white;
+  height: 300px;
+  max-height: 100%;
 }
 
-.copyright
-{
-text-align: left;
-color: white;
+.socials {
+  grid-column: 10 / 13;
+  border: 1px solid white;
+  height: 300px;
+  max-height: 100%;
+}
+
+.copyright {
+  text-align: left;
+  color: white;
 }
