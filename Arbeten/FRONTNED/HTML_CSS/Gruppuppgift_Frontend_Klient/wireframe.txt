@@ -1,0 +1,38 @@
+
+Medlemar:
+Natnael
+Fehed
+Mohammed
+Khalid
+
+
+Våra mockups:
+
+Global Header, Navigation & Footer
+
+https://wireframe.cc/woxhA2
+
+-----------------------------------------------
+
+Individuella mockups för sidorna, allt innehåll är i body section.
+
+
+Natnael mock up store/hem:
+
+https://wireframe.cc/USU3fa
+
+Fehed mock up för aboutus:
+
+https://wireframe.cc/phHhE8
+
+https://wireframe.cc/4StRsB
+
+https://wireframe.cc/xQU63X
+
+Mohamed mock up for portfolio:
+https://wireframe.cc/tSOfmU 
+
+
+khalid mockup up för login:
+
+https://wireframe.cc/0riGfO
