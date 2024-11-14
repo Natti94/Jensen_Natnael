@@ -1,0 +1,8 @@
+Gå igenom koden från föreläsningen. 
+
+Ni ska kunna skapa en enkel express-server från scratch på mindre än 5 min och kunna förklara koden. 
+
+Läs på om de olika koncepten vi har gått igenom och se till att du förstår dem. Finns i läsanvisningar.
+
+Bygg din egen backendserver och bygg ut den med middlewares.
+
