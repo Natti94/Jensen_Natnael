@@ -1,14 +1,45 @@
-JAVASCRIPT 
----------
-INTRO-BACKEND
+NPM GENOMGÅNG, INSTALLATION PROCESS: 
+NPM INIT -Y, NPM INSTALL | paket > npm express, npm cookie-parser, npm nodemon, npm body-parser, 
+npm axios [detta ska enbart användas om det inte är ens egna INTERNA API], npm dotenv
+--------------------------------
+MAPP-STRUKTUR >
+
+ROOT[SERVER MAP]
+
+Source MAPP (index.js) / Public MAPP (index.html)
+
+Data MAPP (json fil) i SOURCE MAPP-
+--------------------------------
+HOBBY-API API-NINJAS.COM > SKAPA ETT KONTO FÖR ATT BEGÄRA API NYCKEL.
+
+Testa API-REQUESTS & POSTS
 
 
-1. 
-länka till express/node mudles > 
-const express = require('express')
+INSTRUKTION MED POSTMAN APP
 
-2.
-Lokalisera till port >
-const port = 3000
+1. DATA FRÅN API-HEMSIDAN HÄMTAS VIA HTTP LÄNKEN, TESTA DETTA MED POSTMAN MED ATT GÖRA ETT GET-REQUEST.
 
-3.
+
+2. OM API NYCKEL KRÄVS INSTRUKTION > X-API-KEY > API NYCKELN
+
+3. 
+----------------------------------
+VS CODE / SYNTAX JAVASCRIPT FÖR INDEX JS.
+
+SE LÄSHÄNVISNINGAR I MARKUS REPO, ANVÄND SOM TEMPLATE FÖR EN SERVER.
+
+
+ATT GÅ IGENOM >
+
+ASYNC = https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+
+ÖVRIGT > 
+
+på GITHUB SÅ MÅSTE API NYCKEL IGNONERAS MED EN .ENV fil, alla "hemligheter" sparas i denna fil.
+
+SYNTAX 
+
+-------------------------------
+Terminal 
+ex. test körning i termninal: 
+npx nodemon src/fil.js = localhost:3000
