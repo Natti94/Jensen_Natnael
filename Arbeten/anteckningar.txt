@@ -1,45 +1,59 @@
+BACKEND ANTECKINGAR
+
 NPM GENOMGÅNG, INSTALLATION PROCESS: 
-NPM INIT -Y, NPM INSTALL | paket > npm express, npm cookie-parser, npm nodemon, npm body-parser, 
-npm axios [detta ska enbart användas om det inte är ens egna INTERNA API], npm dotenv
---------------------------------
+NPM INIT -Y, NPM INSTALL | paket > npm i express, npm i cookie-parser, npm i nodemon, npm i body-parser, 
+npm axios [detta ska enbart användas om det inte är ens egna INTERNA API], npm dotenv, npm i cors (reglering för vad servern ska tillåtas göra)
+
 MAPP-STRUKTUR >
-
 ROOT[SERVER MAP]
-
 Source MAPP (index.js) / Public MAPP (index.html)
-
 Data MAPP (json fil) i SOURCE MAPP-
---------------------------------
+
+
 HOBBY-API API-NINJAS.COM > SKAPA ETT KONTO FÖR ATT BEGÄRA API NYCKEL.
-
 Testa API-REQUESTS & POSTS
-
-
 INSTRUKTION MED POSTMAN APP
+DATA FRÅN API-HEMSIDAN HÄMTAS VIA HTTP LÄNKEN, TESTA DETTA MED POSTMAN MED ATT GÖRA ETT GET-REQUEST.
+OM API NYCKEL KRÄVS INSTRUKTION > X-API-KEY > API NYCKELN
+ 
 
-1. DATA FRÅN API-HEMSIDAN HÄMTAS VIA HTTP LÄNKEN, TESTA DETTA MED POSTMAN MED ATT GÖRA ETT GET-REQUEST.
-
-
-2. OM API NYCKEL KRÄVS INSTRUKTION > X-API-KEY > API NYCKELN
-
-3. 
-----------------------------------
 VS CODE / SYNTAX JAVASCRIPT FÖR INDEX JS.
-
-SE LÄSHÄNVISNINGAR I MARKUS REPO, ANVÄND SOM TEMPLATE FÖR EN SERVER.
-
-
-ATT GÅ IGENOM >
-
-ASYNC = https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
-
-ÖVRIGT > 
-
+SE LÄSANVISNINGAR I MARKUS REPO, ANVÄND SOM TEMPLATE FÖR EN SERVER. 
 på GITHUB SÅ MÅSTE API NYCKEL IGNONERAS MED EN .ENV fil, alla "hemligheter" sparas i denna fil.
 
-SYNTAX 
-
--------------------------------
 Terminal 
 ex. test körning i termninal: 
 npx nodemon src/fil.js = localhost:3000
+
+NPM CORS
+const cors = require('require')
+
+dotenv npm
+require('dotenv').config() < syntax i index.js
+ignonera att port visas med PORT = 5000 i ENV fil ändra syntax till 'process.env.PORT' | istället för PORT = 3000;
+MONGO_CONNECTION_STREAM = NYCKEL FRÅN ATLAS/MONGODB GÖM DETTA I ENV FIL.
+
+MONGODB 
+skapa en databas med atlas på mongodbs hemsida.
+skapa en directory för mongoDB databas med Terminal på er server för databas
+ladda ner paket för att koppla till mongodb databas på atlas > npm i mongoose 
+SKAPA CONFIG MAP I SRC MAPPEN FÖR MONGODB DATABAS > döp en fil till databas.js.
+här ska monngoose konfigureras
+const mongoose = require('moongose')
+sätt upp med 'try' statement.
+här ska nyckeln/anslutningsstreamen konfigureras i statementet
+
+NOTEJS
+SKAPA MAPPEN MODELS I SRC MAPPEN > SKAPA NOTE.JS FILEN I MODELS MAPPEN 
+Här ska datamodeller struktureras
+skapa mappen CONTROLLERS i SRC Mapppen > skapa fil noteController.js
+
+
+HTTP STATUS KODER
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+
+SKAPA MAPP ROUTE I SRC MAPPEN > SKAPA FIL noteRoute.js
+
+
+FRONTEND ANTECKNINGAR
