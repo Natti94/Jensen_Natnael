@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const connectDB = require('./config/db')
+const connectDB = require('./config')
 require('dotenv').config()
 
 const app = express()
@@ -11,7 +11,7 @@ connectDB()
 app.use(cors())
 app.use(express.json())
 
-app.use('/api/notes', require('./routes/noteRoutes'))
+app.use('/api/notes', require('./route'))
 
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`)
