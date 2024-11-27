@@ -1,3 +1,5 @@
+//  //
+
 const Note = require('../models/Note')
 
 const getAllNotes = async (req, res) => {
