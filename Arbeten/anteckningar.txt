@@ -56,4 +56,30 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
 SKAPA MAPP ROUTE I SRC MAPPEN > SKAPA FIL noteRoute.js
 
 
+
+Authentication
+
+NPM:
+express-session
+express-jwt
+jsonwebtoken (bcryptjs)
+
+MAPP STRUKTUR: LIKADANT SOM OVAN
+
+
+
+LÄSANVISNINGAR:
+JWT.IO
+
+
+
+
+
+----------------------------
+
 FRONTEND ANTECKNINGAR
+
+
+ejs.io 
+
+hantera data som ska visas i frontendss
