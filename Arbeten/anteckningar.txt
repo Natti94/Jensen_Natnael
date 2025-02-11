@@ -82,4 +82,4 @@ FRONTEND ANTECKNINGAR
 
 ejs.io 
 
-hantera data som ska visas i frontendss
+hantera data som ska visas i frontends
