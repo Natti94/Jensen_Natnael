@@ -1,0 +1,7 @@
+/* fil som innehåller komponent styling */
+.square
+{
+height: 250px;
+width: 250px;
+background-color: black;
+}
