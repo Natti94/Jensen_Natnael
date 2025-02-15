@@ -1,11 +1,7 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import Event from "./components/EventComponent/events"; // Adjust this path as needed 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Event />
@@ -13,4 +9,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
