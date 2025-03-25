@@ -1,5 +1,1 @@
-demos, tests & övrigt
-
---
-
-Mycket av tidigare blivit borttaget.
+mycket av tidigare blivit borttaget :(
